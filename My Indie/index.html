@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="PandaCoding">
+  <meta name="keywords" content="인디게임 큐레이션 테스트">
+  <meta name="description" content="인디게임 큐레이션 테스트">
+
+  <!-- sns share -->
+  <meta property="og:url" content="https://myindietype.netlify.app" />
+  <meta property="og:title" content="인디게임 큐레이션 테스트" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/share.png" />
+  <meta property="og:description" content="인디게임 큐레이션 테스트" />
+
+  <!--favicon-->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
+
+  <title>인디게임 큐레이션 테스트</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/qna.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/result.css">
+</head>
+
+<body>
+  <div class="container">
+    <section id="main" class="mx-auto my-5 py-5 px-3">
+      <h1>인디게임 큐레이션 테스트</h1>
+      <p>
+        어떤 인디게임을 플레이할까 <br>
+        고민 중인 당신에게,<br>
+        인디패스가 당신과 딱 맞는 게임을 찾아드릴게요.<br>
+      </p>
+      <button type="button" class="btn btn-secondary btn-lg" onclick="js:begin()">Start</button>
+      <div class="col-lg-8 col-md-8 col-sm-10 col-6 mx-auto">
+        <img src="./img/main.png" alt="mainImage" class="img-fluid">
+      </div>
+    </section>
+    <section id="qna">
+      <div class="status mx-auto mt-5">
+        <div class="statusBar">
+        </div>
+      </div>
+      <div class="qBox my-5 py-3 mx-auto">
+
+      </div>
+      <div class="answerBox">
+
+      </div>
+    </section>
+    <section id="result" class="mx-auto my-5 py-5 px-3">
+      <h1>당신의 결과는?</h1>
+      <div class="resultname">
+      </div>
+      <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="resultDesc">
+
+      </div>
+      <button class = "btn btn-secondary btn-lg" id="shareButton">공유하기</button>
+
+<script>
+document.getElementById('shareButton').addEventListener('click', () => {
+  if (navigator.share) {
+    navigator.share({
+      title: '인디게임 큐레이션 테스트',
+      text: '테스트 결과를 확인하세요!',
+      url: 'https://Myindie.netlify.app/'
+    })
+    .then(() => console.log('공유 성공'))
+    .catch((error) => console.error('공유 실패', error));
+  } else {
+    alert('죄송합니다. 브라우저가 공유 기능을 지원하지 않습니다.');
+  }
+});
+</script>
+
+</body>
+</html>
+    </section>
+    <script src="./js/data.js" charset="utf-8"></script>
+    <script src="./js/start.js" charset="utf-8"></script>
+  </div>
+</body>
+
+</html>

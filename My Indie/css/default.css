@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(37, 37, 37);
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'NanumSquareNeo-Variable', sans-serif; /* 모든 요소에 폰트 적용 */
+}
